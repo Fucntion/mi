@@ -1,0 +1,48 @@
+<div class="hd">
+    <h1 class="page_title">公益项目</h1>
+    <p class="page_desc">公益在于行动而不是心动</p>
+</div>
+<div class="weui_grids">
+
+  <article class="weui-article">
+    <section>
+        <div ng-repeat="case in content.innerHTML" class="item" ng-click="content.go(case)"  style="background-image:url({{case.thumb}})">
+            <div class="title">春暖花开贫困援助活动第一季</div>
+            <div class="info">
+              <span><i class="now"></i>完成{{case.total}}</span>
+              <span><i class="process"></i>进度{{case.total/case.aim*100 | number:2}}%</span>
+              <span><i class="aim"></i>目标{{case.aim}}</span>
+            </div>
+            <div class="mask"></div>
+        </div>
+
+
+
+    </section>
+
+  </article>
+  <!-- loading toast -->
+  <div id="loadingToast" ng-if="loadingToastHide" class="weui_loading_toast aweui-show">
+      <div class="weui_mask_transparent"></div>
+      <div class="weui_toast">
+          <div class="weui_loading">
+              <div class="weui_loading_leaf weui_loading_leaf_0"></div>
+              <div class="weui_loading_leaf weui_loading_leaf_1"></div>
+              <div class="weui_loading_leaf weui_loading_leaf_2"></div>
+              <div class="weui_loading_leaf weui_loading_leaf_3"></div>
+              <div class="weui_loading_leaf weui_loading_leaf_4"></div>
+              <div class="weui_loading_leaf weui_loading_leaf_5"></div>
+              <div class="weui_loading_leaf weui_loading_leaf_6"></div>
+              <div class="weui_loading_leaf weui_loading_leaf_7"></div>
+              <div class="weui_loading_leaf weui_loading_leaf_8"></div>
+              <div class="weui_loading_leaf weui_loading_leaf_9"></div>
+              <div class="weui_loading_leaf weui_loading_leaf_10"></div>
+              <div class="weui_loading_leaf weui_loading_leaf_11"></div>
+          </div>
+          <p class="weui_toast_content">数据加载中</p>
+      </div>
+  </div>
+  <!--end toast-->
+
+
+</div>

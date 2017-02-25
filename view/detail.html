@@ -1,0 +1,28 @@
+<div class="hd">
+    <h1 class="page_title">活动详情</h1>
+    <p class="page_desc">{{detail.title}}</p>
+</div>
+<div class="weui_grids">
+
+  <article class="weui-article">
+    <section id="show" show-directive>
+        <div compile="detail.content"></div>
+    </section>
+  </article>
+  <div class="btnbar">
+    <div class="weui-flex">
+        <div class="weui-flex__item progress" style="margin:0" >
+          <div class="placeholder help_total" ng-show="progressShow" style="width:{{detail.total/detail.aim*100 | number:2}}%;max-width:100%;">捐赠进度 {{detail.total/detail.aim*100 | number:2}}%</div>
+          <div class="help_total"  ng-show="!progressShow">捐赠进度 {{detail.total/detail.aim*100 | number:2}}%</div>
+        </div>
+    </div>
+    <div class="weui-cell" ng-show="help.helpShow">
+        <div class="weui-cell__hd"><label class="weui-label">积分数</label></div>
+        <div class="weui-cell__bd" style="border:1px solid #04BE02;padding:5px" >
+            <input class="weui-input" ng-model="help.number"  placeholder="请在此输入捐赠的积分数">
+        </div>
+    </div>
+    <a href="javascript:;" style="border-radius:0" ng-click="help.submit()" class=" weui_btn weui_btn_primary">我要捐赠</a>
+  </div>
+
+</div>

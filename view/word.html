@@ -1,0 +1,50 @@
+<div class="page">
+    <div class="hd">
+        <h1 class="page_title">公益背单词</h1>
+        <p class="page_desc">背单词积攒积分,支持公益事业</p>
+    </div>
+    <div class="bd spacing">
+      <div class="button_sp_area">
+          <dl class="word_select_list">
+            <dt class="word_question">与 <span>{{content.question}}</span> 相符的选项是</dt>
+            <a ng-repeat="subscription in content.entities" href="javascript:;" ng-class="{true:'active',false:''}[subscription.checked]" ng-click="content.updateSelection($index, content.entities)">{{subscription.value}}</a>
+          </dl>
+      </div>
+      <a href="javascript:;" ng-class="{true:'weui_btn_disabled',false:''}[content.submitBtn.Disabled]" ng-click="content.submitBtn.submit()" class="word_submit weui_btn weui_btn_primary">{{content.submitBtn.html}}</a>
+    </div>
+
+    <div class="total_box"><span class="total">您的总积分为：<i>{{user.scount}}</i></span>
+      <!-- <br/><span class="total">本次总共<i>{{user.total}}</i>题 </span><span class="success">答对：<i>{{user.success}}</i></span><span class="error">答错：<i>{{user.error}}</i></span> -->
+    </div>
+
+    <!--BEGIN toast-->
+    <div id="toast" ng-if="!toast.hide" class="aweui-show">
+        <div class="weui_mask_transparent"></div>
+        <div class="weui_toast">
+            <i class="weui_icon_toast" ng-class="{true:'weui_icon_toast',false:'weui_icon_toast1'}[toast.result]"></i>
+            <p class="weui_toast_content">{{toast.msg}}</p>
+        </div>
+    </div>
+    <!-- loading toast -->
+    <div id="loadingToast" ng-if="loadingToastHide" class="weui_loading_toast aweui-show">
+        <div class="weui_mask_transparent"></div>
+        <div class="weui_toast">
+            <div class="weui_loading">
+                <div class="weui_loading_leaf weui_loading_leaf_0"></div>
+                <div class="weui_loading_leaf weui_loading_leaf_1"></div>
+                <div class="weui_loading_leaf weui_loading_leaf_2"></div>
+                <div class="weui_loading_leaf weui_loading_leaf_3"></div>
+                <div class="weui_loading_leaf weui_loading_leaf_4"></div>
+                <div class="weui_loading_leaf weui_loading_leaf_5"></div>
+                <div class="weui_loading_leaf weui_loading_leaf_6"></div>
+                <div class="weui_loading_leaf weui_loading_leaf_7"></div>
+                <div class="weui_loading_leaf weui_loading_leaf_8"></div>
+                <div class="weui_loading_leaf weui_loading_leaf_9"></div>
+                <div class="weui_loading_leaf weui_loading_leaf_10"></div>
+                <div class="weui_loading_leaf weui_loading_leaf_11"></div>
+            </div>
+            <p class="weui_toast_content">数据加载中</p>
+        </div>
+    </div>
+    <!--end toast-->
+</div>

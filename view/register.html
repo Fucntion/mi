@@ -1,0 +1,23 @@
+<div class="page">
+    <div class="hd">
+        <h1 class="page_title">注册</h1>
+        <p class="page_desc">世界上最简单的注册</p>
+    </div>
+    <div class="bd spacing">
+
+      <div class="weui-cell">
+          <div class="weui-cell__bd">
+              <input class="weui-input" ng-model="usr" type="text" ng-change="updateSelection()" placeholder="账号需要大于2个字母或者中文">
+          </div>
+      </div>
+      <div class="weui-cell">
+          <div class="weui-cell__bd">
+              <input class="weui-input" ng-model="pwd" type="password" ng-change="updateSelection()" placeholder="密码需要大于4个字母或者中文">
+          </div>
+      </div>
+      <a href="javascript:;" ng-class="{true:'weui_btn_disabled',false:''}[submitBtn.Disabled]" ng-click="submitBtn.submit()" class="word_submit weui_btn weui_btn_primary">{{submitBtn.html}}</a>
+    </div>
+    </div>
+
+
+</div>

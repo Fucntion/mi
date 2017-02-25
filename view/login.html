@@ -1,0 +1,35 @@
+<div class="page">
+    <div class="hd">
+        <h1 class="page_title">登陆</h1>
+        <p class="page_desc">后续会加入微信一键登录</p>
+    </div>
+    <div class="bd spacing">
+        <div class="weui-cell">
+            <div class="weui-cell__bd">
+                <input class="weui-input" ng-model="usr" type="text" ng-change="updateSelection()" placeholder="账号">
+            </div>
+        </div>
+        <div class="weui-cell">
+            <div class="weui-cell__bd">
+                <input class="weui-input" ng-model="pwd" type="password" ng-change="updateSelection()" placeholder="密码">
+            </div>
+        </div>
+        <a href="javascript:;" ng-class="{true:'weui_btn_disabled',false:''}[submitBtn.Disabled]" ng-click="submitBtn.submit()" class="word_submit weui_btn weui_btn_primary">{{submitBtn.html}}</a>
+        <a href="javascript:void(0);" class="weui_btn_disabled word_submit weui_btn weui_btn_primary register">注册</a>
+        <div class="quick_login_box">
+            <div class="wb login_item">
+<img src="images/icon_wb.png" >
+             <p>微博登陆</p>
+            </div>
+            <div class="wx login_item">
+                <img  ng-click="quick_login('wx')" src="images/icon_wx.png" >
+             <p>微信登陆</p>
+            </div>
+            <div class="qq login_item">
+                <img src="images/icon_qq.png" >
+             <p>qq登陆</p>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
